@@ -4,7 +4,11 @@
 #define BASE 0 // default layer
 #define SYMB 1 // symbols
 #define MDIA 2 // media keys
+<<<<<<< HEAD
 #define GAME 3 // Gaming layer
+=======
+#define GAME 3 // gaming layer
+>>>>>>> 2ddeeca971 (thing)
 
 enum custom_keycodes {
   VRSN = SAFE_RANGE,
@@ -19,18 +23,31 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
  * | Del    |   Q  |   D  |   R  |   W  |   B  |TG(1) |           | TG(1)|   J  |   F  |   U  |   P  |   ;  |   \    |
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
+<<<<<<< HEAD
  * | BkSp   |   A  |   S  |   H  |   T  |   G  |------|           |------|   Y  |   N  |   E  |   O  |I / L2|' / Cmd |
  * |--------+------+------+------+------+------|TG(2) |           |TG(2) |------+------+------+------+------+--------|
+=======
+ * | LCTL   |   A  |   S  |   H  |   T  |   G  |------|           |------|   Y  |   N  |   E  |   O  |I / L2|' / Cmd |
+ * |--------+------+------+------+------+------|TG(2) |           |TG(3) |------+------+------+------+------+--------|
+>>>>>>> 2ddeeca971 (thing)
  * | LShift |Z/Ctrl|   X  |   M  |   C  |   ,  |      |           |      |   .  |   V  |   K  |   L  |//Ctrl| RShift |
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
  *   |Grv/L1|  '"  |AltShf|  [   |  ]   |                                       | Left | Down |  Up  | Right | ~L1  |
  *   `----------------------------------'                                       `----------------------------------'
  *                                        ,-------------.       ,-------------.
+<<<<<<< HEAD
  *                                        | App  | LGui |       | Play  |Ctrl/Esc|
  *                                 ,------|------|------|       |------+--------+------.
  *                                 |      |      | Home |       | Inst |        |      |
  *                                 | Space|Backsp|------|       |------|  Tab   |Enter |
  *                                 |      |ace   | End  |       | PtSc |        |      |
+=======
+ *                                        | Home | End  |       | Play  |Ctrl/Esc|
+ *                                 ,------|------|------|       |------+--------+------.
+ *                                 |      |      | LAlt |       | Inst |        |      |
+ *                                 | Space|Backsp|------|       |------|  Tab   |Enter |
+ *                                 |      |ace   | GUI  |       | PtSc |        |      |
+>>>>>>> 2ddeeca971 (thing)
  *                                 `--------------------'       `----------------------'
  */
 // If it accepts an argument (i.e, is a function), it doesn't need KC_.
@@ -39,18 +56,32 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         // left hand
         KC_EQL,         KC_1,         KC_2,   KC_3,   KC_4,   KC_5,   LGUI(KC_LBRC),
         KC_DEL,         KC_Q,         KC_D,   KC_R,   KC_W,   KC_B,   TG(SYMB),
+<<<<<<< HEAD
         KC_BSPC,        KC_A,         KC_S,   KC_H,   KC_T,   KC_G,
         KC_LSFT,        CTL_T(KC_Z),  KC_X,   KC_M,   KC_C,   KC_COMM,   TG(MDIA),
         LT(SYMB,KC_GRV),KC_QUOT,      LALT(KC_LSFT),  KC_LBRC,KC_RBRC,
                                               ALT_T(KC_APP),  KC_LGUI,
                                                               KC_HOME,
                                                KC_SPC,KC_BSPC,KC_END,
+=======
+        KC_LCTL,        KC_A,         KC_S,   KC_H,   KC_T,   KC_G,
+        KC_LSFT,        CTL_T(KC_Z),  KC_X,   KC_M,   KC_C,   KC_COMM,   TG(MDIA),
+        LT(SYMB,KC_GRV),KC_QUOT,      LALT(KC_LSFT),  KC_LBRC,KC_RBRC,
+                                              KC_HOME,  KC_END,
+                                                              KC_LALT,
+                                               KC_SPC,KC_BSPC,KC_LGUI,
+>>>>>>> 2ddeeca971 (thing)
         // right hand
              LGUI(KC_RBRC),  KC_6,   KC_7,  KC_8,   KC_9,   KC_0,             KC_MINS,
              TG(SYMB),    KC_J,   KC_F,  KC_U,   KC_P,   KC_SCLN,             KC_BSLS,
                           KC_Y,   KC_N,  KC_E,   KC_O,   LT(MDIA, KC_I),GUI_T(KC_QUOT),
+<<<<<<< HEAD
              TG(MDIA),KC_DOT,   KC_V,  KC_K,KC_L, CTL_T(KC_SLSH),   KC_RSFT,
                                   KC_LEFT, KC_DOWN,KC_RIGHT,KC_RBRC,          KC_NO,
+=======
+             TG(GAME),KC_DOT,   KC_V,  KC_K,KC_L, CTL_T(KC_SLSH),   KC_RSFT,
+                                  KC_LEFT, KC_DOWN,KC_UP,KC_RIGHT,          MO(SYMB),
+>>>>>>> 2ddeeca971 (thing)
              KC_MPLY,        CTL_T(KC_ESC),
              KC_INS,
              KC_PSCR,KC_TAB,KC_ENT
@@ -131,8 +162,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // right hand
        KC_TRNS,  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
        KC_TRNS,  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+<<<<<<< HEAD
                  KC_TRNS, KC_WH_U, KC_TRNS, KC_TRNS, KC_TRNS, KC_MPLY,
        KC_TRNS,  KC_TRNS, KC_WH_D, KC_MPRV, KC_MNXT, KC_TRNS, KC_TRNS,
+=======
+                 KC_TRNS, KC_TRNS, KC_WH_D, KC_WH_U, KC_TRNS, KC_MPLY,
+       KC_TRNS,  KC_TRNS, KC_TRNS, KC_MPRV, KC_MNXT, KC_TRNS, KC_TRNS,
+>>>>>>> 2ddeeca971 (thing)
                           KC_VOLU, KC_VOLD, KC_MUTE, KC_TRNS, KC_TRNS,
        KC_TRNS, KC_TRNS,
        KC_TRNS,
@@ -145,6 +181,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
  * | TAB    | Q    | W    | E    | R    | T    | 7    |           |      |  Y   |      |  UP  |      | P    |  +     |
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
+<<<<<<< HEAD
  * | CAPS   | A    | S    | D    | F    | G    |------|           |------|      | LEFT |  DOWN| RIGHT| '    |  \     |
  * |--------+------+------+------+------+------| 8    |           |      |------+------+------+------+------+--------|
  * |  SHIFT | Z    | X    | C    | V    | B    |      |           |      |  N   | M    | ,    | .    | /    | RSHIFT |
@@ -155,6 +192,18 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                                        | ESC  | GUI  |       | F9   |      |
  *                                 ,------|------|------|       |------+------+------.
  *                                 |SPC   |      | INS  |       |      |      |      |
+=======
+ * | ~      | A    | S    | D    | F    | G    |------|           |------|      | LEFT |  DOWN| RIGHT| '    |  \     |
+ * |--------+------+------+------+------+------| 8    |           | TG(3) |------+------+------+------+------+--------|
+ * |  SHIFT | Z    | X    | C    | V    | B    |      |           |      |  N   | M    | ,    | .    | /    | RSHIFT |
+ * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
+ *   | LCTRL   |      |      |   | LALT |                                    | RALT |   | MO(SYMB) |TO(BASE) | TG(GAME)|
+ *   `----------------------------------'                                       `----------------------------------'
+ *                                        ,-------------.       ,-------------.
+ *                                        | ESC  | GUI  |       | F9   | Back |
+ *                                 ,------|------|------|       |------+------+------.
+ *                                 |SPC   |      | INS  |       | Play |      |      |
+>>>>>>> 2ddeeca971 (thing)
  *                                 |      |      |------|       |------|      |Enter |
  *                                 |      |      | LALT |       | F5   |      |      |
  *                                 `--------------------'       `--------------------'
@@ -163,7 +212,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [GAME] = LAYOUT_ergodox(
        KC_F12, KC_1, KC_2, KC_3, KC_4, KC_5, KC_6,
        KC_TAB, KC_Q, KC_W, KC_E, KC_R, KC_T, KC_7,
+<<<<<<< HEAD
        KC_CAPS, KC_A, KC_S, KC_D, KC_F, KC_G,
+=======
+       KC_GRV, KC_A, KC_S, KC_D, KC_F, KC_G,
+>>>>>>> 2ddeeca971 (thing)
        KC_LSFT, KC_Z, KC_X, KC_C, KC_V, KC_B, KC_8,
        KC_LCTL, KC_NO, KC_NO, KC_NO, KC_LALT,
                                            KC_ESC, KC_LGUI,
@@ -173,10 +226,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
        KC_LEFT,  KC_6, KC_7, KC_8, KC_9, KC_0, KC_MINS,
        KC_NO,  KC_Y, KC_NO, KC_UP, KC_NO, KC_P, KC_EQL,
                  KC_NO, KC_LEFT, KC_DOWN, KC_RIGHT, KC_QUOT, KC_BSLS,
+<<<<<<< HEAD
        KC_NO,  KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH, KC_RSFT,
                           KC_NO, KC_NO, KC_NO, TO(BASE), TG(GAME),
        KC_F9, KC_NO,
        KC_NO,
+=======
+       TG(GAME),  KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH, KC_RSFT,
+                          KC_F1, KC_F2, KC_F3, TO(BASE), TG(GAME),
+       KC_F9, KC_BSPC,
+       KC_MPLY,
+>>>>>>> 2ddeeca971 (thing)
        KC_F5, KC_NO, KC_ENT
 ),
 };
